@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#121212">
+  <meta name="description" content="SSTV Encoder and Decoder">
+
+  <title>SSTV</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #121212;
+      overflow-x: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 636px;
+      border: 0;
+      background: #121212;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe
+    src="https://vayce.app/embed/sstv-encoder-decoder/?_surface=transparent&_pad=roomy&_theme=dark"
+    width="800"
+    height="636"
+    allow="clipboard-write; microphone"
+    title="SSTV Encoder and Decoder">
+  </iframe>
+
+  <script src="https://vayce.app/embed.js" async></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
